@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeRPG</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo_container">
+                <h1>CodeRPG</h1>
+                <img src="imgs/codeRPGLogo.png" alt="codeRPG logo" id="logo_icon">
+            </div>
+            <div id="nav_buttons">
+                <a href="">Practice</a>
+                <a href="">About</a>
+                <a href="">Sign In</a>
+            </div>
+        </div>
+
+        <div id="main_container">
+            <div id="levels_container">
+                <h2>Levels</h2>
+                <p>level 1</p>
+                <p>level 2</p>
+            </div>
+            <div id="game_container">
+                <div id="player_stats">
+                    <p>Health: <span>100</span></p>
+                    <p>Mana: <span>100</span></p>
+                    <p>Gold: <span>0</span></p>
+                    <div id="xp_box">
+                        <p>XP: </p>
+                        <div id="xp">
+                            <div id="yellow_xp">
+                            
+                            </div>
+                            <div id="white_xp"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="battle_scene">
+                    <img src="imgs/Character1_face1.png" alt="main character">
+                    <div id="enemy_container">
+                        <p>HP: <span id="enemy_hp">100</span></p>
+                        <img src="imgs/Character5_face3.png" alt="enemy character" id="enemy_img">
+                    </div>
+                </div>
+                <div id="dialog_container">
+                    <div id="dialog">
+                        <p id="dialog_words">It's time to start your adventure! The more you fight the more you grow! Are you ready to fight? If so you may want to stop reading this and click the button to your right. However if you like reading this for no reason other than to hear your own narrator voice in your head, feel free to keep on reading this. However I assure you there is no more important information here. No seriously. I have nothing else left to say until you click continue. So please just stop reading.</p>
+                        <button id="continue_button" onclick="new_dialog()">Continue</button>
+                        <button id="start_fight_button" onclick="start_fight()">Fight!</button>
+                    </div>
+                    <div id="player_actions">
+                        <button id="attack_button" onclick="player.attack()">Attack</button>
+                        <button id="heal_button">Heal</button>
+                        <button id="spell_button">Spell</button>
+                    </div>
+                    <div id="coding_questions">
+                        <p id="question"></p>
+                        <p id="option_a"></p>
+                        <p id="option_b"></p>
+                        <p id="option_c"></p>
+                        <button id="answer_a" onclick="player.answer(this)">a</button>
+                        <button id="answer_b" onclick="player.answer(this)">b</button>
+                        <button id="answer_c" onclick="player.answer(this)">c</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* #2A0944 Dark purple
+#3B185F purple
+#A12568 pink
+#FEC260  yellow */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+    background-color: #2A0944;
+    color: #FEC260;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: .5% 10%;
+}
+
+#logo_container, #nav_buttons {
+    display: flex;
+    align-items: center;
+}
+
+
+#logo_icon {
+    width: 6%;
+    margin-left: 2%;
+}
+
+#nav_buttons {
+    justify-content: space-around;
+    width: 18%;
+}
+
+h1, #nav_buttons a, #sign_in {
+    font-size: 20px;
+    text-decoration: none;
+    color: #FEC260;
+}
+
+#main_container {
+    display: flex;
+}
+
+#levels_container {
+    flex: 1;
+    background-color: #2A0944;
+    text-align: center;
+}
+
+#game_container {
+    flex: 12;
+    height: 95lvh;
+    overflow: hidden;
+}
+
+#player_stats {
+    background-color:  #8f8f8f;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5% 10%;
+    font-size: 18px;
+}
+
+#xp_box {
+    display: flex;
+    width: 15%;
+    height: 50%;
+}
+
+#xp {
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+#xp_box p {
+    margin-right: 2%;
+}
+
+#yellow_xp {
+    background-color: #FEC260;
+    width: 10%;
+    height: 50%;
+}
+
+#white_xp {
+    background-color: #FFF;
+    width: 90%;
+    height: 50%;
+}
+
+#battle_scene {
+    background-color: #3B185F;
+    padding: 8% 10% 0% 15%;
+    display: flex;
+}
+
+#enemy_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin-left: 10%;
+}
+
+#enemy_img {
+    width: 10%;
+    padding-left: 2%;
+}
+
+#dialog_container {
+    padding: 1% 20% 0 5%;
+}
+
+#dialog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+#continue_button, #start_fight_button {
+    padding: .5% 1%;
+    margin-left: 5%;
+    align-self: flex-start;
+    background-color: #FEC260;
+}
+
+#player_actions {
+    visibility: hidden;
+}
+#player_actions button, #coding_questions button {
+    padding: 0 1%;
+    background-color: #FEC260;
+    border: 1px solid black;
+    margin-top: 1%;
+}
+
+#start_fight_button {
+    display: none;
+}
+
+#coding_questions {
+    margin-top: 1%;
+    visibility: hidden;
+}
+
