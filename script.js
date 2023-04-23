@@ -56,11 +56,11 @@ function character_info() {
     if (player_race == "goblin") {
         player_img_id.src = "characters/Goblins/Goblin_" + player_gender + "_idle.png"
     } else if (player_race == "minotaur") {
-        player_img_id.src = "characters/minotaurs/minotaur_" + player_gender + "_idle.png"
+        player_img_id.src = "characters/Minotaurs/minotaur_" + player_gender + "_idle.png"
     } else if (player_race == "elf") {
-        player_img_id.src = "characters/elves/elf_" + player_gender + "_idle.png"
+        player_img_id.src = "characters/Elves/elf_" + player_gender + "_idle.png"
     } else {
-        player_img_id.src = "characters/humans/human_" + player_gender + "_idle.png"
+        player_img_id.src = "characters/Humans/human_" + player_gender + "_idle.png"
     }
 
     player_img_id.style.visibility = "visible"
