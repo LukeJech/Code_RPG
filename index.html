@@ -7,12 +7,31 @@
     <title>CodeRPG</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="character.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="character_info">
+        <p>What is your name?</p>
+        <input type="text" name="player_name" id="player_name" placeholder="your character name...">
+        <p>You are a...</p>
+        <select name="race" id="player_race">
+            <option value="human">Human</option>
+            <option value="elf">Elf</option>
+            <option value="goblin">Goblin</option>
+            <option value="minotaur">Minotaur</option>
+        </select>
+        <p>Gender</p>
+        <select name="gender" id="player_gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <button onclick="character_info()">submit</button>
+    </div>
+
     <div id="wrapper">
         <div id="header">
             <div id="logo_container">
@@ -47,32 +66,37 @@
                         </div>
                     </div>
                 </div>
-                <div id="battle_scene">
-                    <img src="imgs/Character1_face1.png" alt="main character">
-                    <div id="enemy_container">
-                        <p>HP: <span id="enemy_hp">100</span></p>
-                        <img src="imgs/Character5_face3.png" alt="enemy character" id="enemy_img">
+                <div id="game_scene">
+                    <div id="inventory">
+                        <h3>Inventory</h3>
                     </div>
-                </div>
-                <div id="dialog_container">
-                    <div id="dialog">
-                        <p id="dialog_words">It's time to start your adventure! The more you fight the more you grow! Are you ready to fight? If so you may want to stop reading this and click the button to your right. However if you like reading this for no reason other than to hear your own narrator voice in your head, feel free to keep on reading this. However I assure you there is no more important information here. No seriously. I have nothing else left to say until you click continue. So please just stop reading.</p>
-                        <button id="continue_button" onclick="new_dialog()">Continue</button>
-                        <button id="start_fight_button" onclick="start_fight()">Fight!</button>
+                    <div id="game_background_div">
+                        <img src="backgrounds/start_background_with_anvil.png" alt="background for game" id="game_background">
+                        <img src="characters/father/Blacksmith_father.png" id="npc">
+                        <img src="" alt="player image" id="player_image">
+                        <!-- <img src="characters/Goblins/Goblin_Male_idle.png" alt=""> -->
                     </div>
-                    <div id="player_actions">
-                        <button id="attack_button" onclick="player.attack()">Attack</button>
-                        <button id="heal_button">Heal</button>
-                        <button id="spell_button">Spell</button>
-                    </div>
-                    <div id="coding_questions">
-                        <p id="question"></p>
-                        <p id="option_a"></p>
-                        <p id="option_b"></p>
-                        <p id="option_c"></p>
-                        <button id="answer_a" onclick="player.answer(this)">a</button>
-                        <button id="answer_b" onclick="player.answer(this)">b</button>
-                        <button id="answer_c" onclick="player.answer(this)">c</button>
+                    <div id="dialog_container">
+                        <div id="dialog">
+                            <p id="dialog_words">Hrogar: Hey my child, come here and come quickly!</p>
+                            <button id="continue_button" onclick="new_dialog()">Continue</button>
+                            <button id="start_fight_button" onclick="start_fight()">Fight!</button>
+                            
+                            <div id="coding_questions">
+                                <p id="question"></p>
+                                <p id="option_a"></p>
+                                <p id="option_b"></p>
+                                <p id="option_c"></p>
+                                <button id="answer_a" onclick="player.answer(this)">a</button>
+                                <button id="answer_b" onclick="player.answer(this)">b</button>
+                                <button id="answer_c" onclick="player.answer(this)">c</button>
+                            </div>
+                            <div id="player_actions">
+                                <button id="attack_button" onclick="player.attack()">Attack</button>
+                                <button id="heal_button">Heal</button>
+                                <button id="spell_button">Spell</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
