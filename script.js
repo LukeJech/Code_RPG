@@ -48,6 +48,7 @@ function character_info() {
     continue_btn.style.visibility = "visible"
     character_info_popup.style.visibility = "hidden"
     npc_img_id.style.visibility = "visible"
+    $('#anvil').show()
 
     player_race = player_race_id.value
     player_gender = player_gender_id.value
@@ -135,6 +136,7 @@ function new_dialog() {
         character_info_popup.style.visibility = "visible"
         continue_btn.style.visibility = "hidden"
         npc_img_id.style.visibility = "hidden"
+        $('#anvil').hide()
     }
 
     if (dialog.innerText != "Time to Fight!" ) {
