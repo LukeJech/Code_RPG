@@ -157,7 +157,6 @@ h1, #nav_buttons a, #sign_in {
     height: 25%;
     right: 43%;
     top: 25%;
-    bottom: 100px;
 }
 
 
@@ -167,7 +166,6 @@ h1, #nav_buttons a, #sign_in {
     height: 15%;
     right: 40%;
     top: 50%;
-    bottom: 100px;
     /* border-radius: 50%; */
     /* box-shadow: 0 0 54px -10px #fff, inset 0 0 70px -30px #fff; */
 }
